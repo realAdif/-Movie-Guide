@@ -1,2 +1,12 @@
-const {Model, DateTypes} = require('sequelize');
-const sequelize = require('../config/connection');
+const User = require('./user');
+const Movies = require('./movies');
+
+User.hasMany(Movies, {
+    foreignKey: 'user_id'
+});
+
+Movies.belongsTo(User, {
+    foreignKey: 'user_id',
+});
+
+module.exports = { User, Movies };
