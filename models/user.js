@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
-=======
-const {Model, DateTypes, DataTypes} = require('sequelize');
-const sequelize = require('../config/connection');
 
 class Users extends Model{}
 
@@ -21,7 +17,6 @@ Users.init(
             unique: true,
             validate:{
                 isEmail: true
-            
             }
         },
 
@@ -66,4 +61,3 @@ Users.init(
 
 );
 module.exports = Users;
->>>>>>> 1893c1ddd6ebf4367ffa58c81d2eaea620b2d5d0
