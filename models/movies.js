@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Movies extends Model {}
+class Movie extends Model {}
 
-Movies.init(
+Movie.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,6 +14,12 @@ Movies.init(
         name: {
             type: DataTypes.STRING,
             allowNull: false
+        }, 
+        year: {
+            type: DataTypes.INTEGER,
+            validate: {
+                len:[4, 4]
+            }
         },
         status: {
             type: DataTypes.STRING
@@ -40,8 +46,8 @@ Movies.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'movies',
     }
 );
 
-module.exports = Movies;
+module.exports = Movie;
