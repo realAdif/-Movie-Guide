@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{username}}!</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Add a Movie: </h3>
+        <form class="form new-movie-form">
+            <div class="form-group">
+                <label for="movie-name">Movie Name: </label>
+                <input type="text" name="movie-name" id="movie-name">
+            </div>
+        <div class="form-group">
+        <label for="movie-review">Review:</label>
+        <textarea class="form-input" id="movie-review" name="movie-review"></textarea>
+        </div>
+        </form>
+    </div>
+    <div>
+        {{#if movie.length}}
+        <div class="col-md-6 movie-list">
+            <h3>Movies: </h3>
+        {{#each movie as |movies|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/movies/{{movie.id}}">{{movie.name}}</a></h4>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>
