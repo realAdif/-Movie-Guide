@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Movies } = require("../../models");
+const { Movie } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post('/', async (req, res) => {
     try {
-        const newMovie = await Movies.create({
+        const newMovie = await Movie.create({
             ...req.body,
             user_id: req.session.user_id
         });
