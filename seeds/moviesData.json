@@ -4,25 +4,25 @@
   "name": "Titanic",
   "year": 1997,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "Medium"
 },
 {
   "name": "Logan",
   "year": 2017,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "Medium"
 },
 {
   "name": "The Terminator",
   "year": 1984,
   "status": "Unwatched",
-  "priority": 1
+  "priority": "Low"
 },
 {
   "name": "Black Panther",
   "year": 2018,
   "status": "Unwatched",
-  "priority": 4
+  "priority": "High"
 },
 {
   "name": "Star Wars: Attack of the Clones",
@@ -31,13 +31,13 @@
   "priority": 0,
   "rating": 5,
   "review": "Great movie",
-  "user_id": 2
+  "user_id": "Low"
 },
 {
   "name": "Star Wars: The Phantom Menace",
   "year": 1999,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "High"
 },
 {
   "name": "A Space Odyssey",
@@ -50,7 +50,6 @@
   "name": "Back to the Future",
   "year": 1985,
   "status": "Watched",
-  "priority": 0,
   "rating": 1,
   "review": "too Much",
   "user_id": 5
@@ -65,7 +64,7 @@
   "name": "Inception",
   "year": 2010,
   "status": "Watched",
-  "priority": 3,
+  "priority": "Medium",
   "rating": 5,
   "review": "complex, engaging and slick",
   "user_id": 3
@@ -74,66 +73,94 @@
   "name": "Arrival",
   "year": 2016,
   "status": "Unwatched",
-  "priority": 2
+  "priority": "Low"
+},
+{
+  "name": "The Gray Man",
+  "year": 2022,
+  "status": "Unwatched",
+  "priority": "High",
+  "display": "newRelease"
+},
+{
+  "name": "Elvis",
+  "year": 2022,
+  "status": "Unwatched",
+  "priority": "Medium",
+  "display": "newRelease"
 },
 {
   "name": "Inglourious Bastards",
   "year": 2009,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "Low"
 },
 {
   "name": "Hurtlocker",
   "year": 2008,
   "status": "Unwatched",
-  "priority": 5
+  "priority": "High"
 },
 {
   "name": "300",
   "year": 2007,
   "status": "Unwatched",
-  "priority": 5
+  "priority": "High"
+},
+{
+  "name": "Avatar: The Way of the Water",
+  "year": 2022,
+  "status": "Unwatched",
+  "priority": "High",
+  "display": "upcoming"
 },
 {
   "name": "La La Land",
   "year": 2016,
   "status": "Unwatched",
-  "priority": 5
+  "priority": "High"
 },
 {
   "name": "Guardians of the Galaxy",
   "year": 2014,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "Medium"
 },
 {
   "name": "Saving Private Ryan",
   "year": 1998,
   "status": "Unwatched",
-  "priority": 3
+  "priority": "High"
 },
 {
   "name": "Forrest Gump",
   "year": 1994,
   "status": "Unwatched",
-  "priority": 4
+  "priority": "High"
+},
+{
+  "name": "The Woman King",
+  "year": 2022,
+  "status": "Unwatched",
+  "priority": "High",
+  "display": "upcoming"
 },
 {
   "name": "Schindlers List",
   "year": 1993,
   "status": "Unwatched",
-  "priority": 4
+  "priority": "High"
 },
 {
   "name": "There will be Blood",
   "year": 2007,
   "status": "Unwatched",
-  "priority": 1
+  "priority": "Low"
 },
 {
   "name": "Gladiator",
   "year": 2000,
   "status": "Unwatched",
-  "priority": 2
+  "priority": "Low"
 }
 ]
