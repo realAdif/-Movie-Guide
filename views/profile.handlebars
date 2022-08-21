@@ -16,20 +16,23 @@
         <label for="movie-review">Review:</label>
         <textarea class="form-input" id="movie-review" name="movie-review"></textarea>
         </div>
-        </form>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Add Movie</button>
+        </div>
+      </form>
     </div>
     <div>
-        {{#if movie.length}}
-        <div class="col-md-6 movie-list">
-            <h3>Movies: </h3>
-        {{#each movie as |movies|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h4><a href="/movies/{{movie.id}}">{{movie.name}}</a></h4>
-            </div>
-        </div>
-        {{/each}}
-        </div>
-        {{/if}}
+      {{#if movies.length}}
+      <div class="col-md-6 movie-list">
+          <h3>Movies: </h3>
+      {{#each movie as |movies|}}
+      <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/movies/{{movie.id}}">{{movie.name}}</a></h4>
+          </div>
+      </div>
+      {{/each}}
+      </div>
+      {{/if}}
     </div>
 </div>
