@@ -9,11 +9,11 @@ router.get('/', withAuth , async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = movieData.map((movie) => movie.get({ plain: true }));
+    const movies = movieData.map((movie) => movie.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('movies', { 
-      projects, 
+      movies, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
