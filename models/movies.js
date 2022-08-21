@@ -21,17 +21,21 @@ Movie.init(
                 len:[4, 4]
             }
         },
-        status: {
+        watch_status: {
             type: DataTypes.STRING
         },
         priority: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         rating: {
             type: DataTypes.INTEGER
         },
         review: {
             type: DataTypes.STRING
+        },
+        display: {
+            type: DataTypes.STRING,
+            allowNull: true
         },
         user_id: {
             type: DataTypes.INTEGER,
