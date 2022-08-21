@@ -1,42 +1,77 @@
 <div class="row">
   <div class="col-md-6">
-    <h2>Login</h2>
 
+    <h2>Login</h2>
     <form class="form login-form">
+
       <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
+        <label for="email-login">Email address</label>
+        <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Enter email">
       </div>
+
       <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
+        <label for="password-login">Password</label>
+        <input type="password" class="form-control" id="password-login" placeholder="Password">
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Login</button>
+
     </form>
+
+
+
   </div>
+
   <div class="col-md-6">
+
     <h2>Signup</h2>
 
-    <form class="form signup-form">
+    {{!-- <form class="form signup-form">
+
       <div class="form-group">
-        <label for="name-signup">name:</label>
+        <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
       </div>
+
       <div class="form-group">
-        <label for="email-signup">email:</label>
+        <label for="email-signup">Email:</label>
         <input class="form-input" type="text" id="email-signup" />
       </div>
+
       <div class="form-group">
-        <label for="password-signup">password:</label>
+        <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
+
       <div class="form-group">
         <button class="btn btn-primary" type="submit">signup</button>
       </div>
+
+    </form> --}}
+
+    <form>
+      <div class="form-group">
+        <label for="name-signup">Name</label>
+        <input type="email" class="form-control" id="name-signup" placeholder="Enter name">
+      </div>
+
+      <div class="form-group">
+        <label for="email-signup">Email address</label>
+        <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="password-signup">Password</label>
+        <input type="password" class="form-control" id="password-signup" placeholder="Password">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+
     </form>
+
+
   </div>
+
 </div>
 
 <script src="./js/login.js"></script>
