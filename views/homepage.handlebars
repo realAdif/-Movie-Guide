@@ -1,0 +1,35 @@
+{{!-- TODO: Implement API functionality (maybe save lists to JSON file and read from there?)--}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div>
+                <h2 class="bg-primary bg-gradient">Trending Movies</h2>
+                <ol>
+                    {{#each trendingMovies as |trendingMovie|}}
+                    <li>{{trendingMovie.name}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <h2 class="bg-primary bg-gradient">Upcoming Movies</h2>
+                <ol>
+                    {{#each upcomingMovies as |upcomingMovie|}}
+                    <li>{{upcomingMovie.name}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div>
+                <div>
+                    <h2 class="bg-primary bg-gradient">Recently Released</h2>
+                    <ol>
+                        {{#each recentMovies as |recentMovie|}}
+                        <li>{{recentMovie.name}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
