@@ -2,14 +2,12 @@
 [
   {
     "email": "johndoe@gmail.com",
-    "firstName": "John",
-    "lastName": "Doe",
+    "name": "John Doe",
     "username": "johnnyDeer",
     "password": "password12345"
 }, {
   "email": "janesmit@hotmail.com",
-  "firstName": "Jane",
-  "lastName": "smit",
+  "name": "Jane Smit",
   "username": "janeSlickSmit",
   "password": "password12345"
 }

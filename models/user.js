@@ -19,12 +19,8 @@ User.init(
                 isEmail: true
             }
         },
-        firstName:{
+        name:{
             type: DataTypes.STRING, 
-            allowNull: false,
-        },
-        lastName:{
-            type: DataTypes.STRING,
             allowNull: false,
         },
         username:{

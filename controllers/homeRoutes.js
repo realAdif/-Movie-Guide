@@ -38,11 +38,10 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.status(200).json(userData);
-    // res.render('profile', {
-    //   ...user,
-    //   logged_in: true
-    // });
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }
