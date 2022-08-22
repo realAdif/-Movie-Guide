@@ -47,7 +47,12 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-// 
+// redirect to SignUp route if user navigates to signup
+router.get('/signup', (req, res) => {
+  res.status(200).render('signup');
+});
+
+// redirect to login route if not logged in
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
