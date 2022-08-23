@@ -2,7 +2,8 @@ const sequelize = require('../config/connection');
 
 const seedUsers = require('./userData.json');
 const seedMovies = require('./moviesData.json');
-const { User, Movie } = require('../models');
+const seedReviews = require('./reviewsData.json');
+const { User, Movie, Review } = require('../models');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -15,24 +16,14 @@ const seedDatabase = async () => {
   for (const movie of seedMovies) {
     await Movie.create({
       ...movie,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-
+  for (const review of seedReviews) {
+    await Review.create({
+      ...review,
+    })
+  }
   process.exit(0);
 };
-
-// const seedDatabase = async () => {
-//   await sequelize.sync({ force: true });
-//   console.log('\n----- DATABASE SYNCED -----\n');
-
-//   await seedMovies();
-//   console.log('\n----- MOVIES SEEDED -----\n');
-
-//   await seedUsers();
-//   console.log('\n----- USERS SEEDED -----\n');
-
-//   process.exit(0);
-// };
 
 seedDatabase();

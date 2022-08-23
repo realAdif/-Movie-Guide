@@ -27,22 +27,9 @@ Movie.init(
         priority: {
             type: DataTypes.STRING
         },
-        rating: {
-            type: DataTypes.INTEGER
-        },
-        review: {
-            type: DataTypes.STRING
-        },
         display: {
             type: DataTypes.STRING,
             allowNull: true
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id'
-            },
         },
     },
     {

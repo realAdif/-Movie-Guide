@@ -1,0 +1,32 @@
+[
+{
+  "rating": 5,
+  "review": "complex, engaging and slick",
+  "movie_id": 10,
+  "user_id": 2
+},
+{
+  "rating": 1,
+  "review": "Too Much, it was like looking into the future of Nokia, 20 years ago",
+  "movie_id": 8,
+  "user_id": 1
+},
+{
+  "rating": 2,
+  "review": "Boring Movie, dragging",
+  "movie_id": 7,
+  "user_id": 2
+},
+{
+  "rating": 5,
+  "review": "Incredible movie, engaging storyline and acting",
+  "movie_id": 5,
+  "user_id": 1
+},
+{
+  "rating": 5,
+  "review": "Incredible, on the edge of my seat. If I was a masochist, I would want to experience all of the hurt in this locker!",
+  "movie_id": 15,
+  "user_id": 2
+}
+]
