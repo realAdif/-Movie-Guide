@@ -63,4 +63,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/movies', (req, res) => {
+  res.render('movies');
+})
+
 module.exports = router;

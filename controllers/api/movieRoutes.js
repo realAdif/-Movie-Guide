@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Movie } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get('/', withAuth , async (req, res) => {
+router.get('/movies', async (req, res) => {
   try {
     // Get all Movies
     const movieData = await Movie.findAll({
@@ -13,7 +13,7 @@ router.get('/', withAuth , async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('movies', { 
-      movies, 
+      // movies,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
