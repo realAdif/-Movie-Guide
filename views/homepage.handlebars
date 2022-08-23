@@ -1,9 +1,86 @@
 {{!-- TODO: Implement API functionality (maybe save lists to JSON file and read from there?)--}}
 <div class="container">
+  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+  </div>
+<div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../images/theGrayMan.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>The Gray Man, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/topgun.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Top Gun: Maverick, 2022</h5>
+          </div> 
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/prey1.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Prey, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/dayShift-img1.jpg" alt="Fourth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Day Shift, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/lightyear-2.jpg" alt="Fifth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lightyear, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/elvis1.jpg" alt="Sixth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Elvis, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/beast2.jpg" alt="Seventh slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Beast, 2022</h5>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/wherethecrawdadsSing1.jpg" alt="Eighth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Where the Crawdads Sing, 2022</h5>
+          </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
     <div class="row">
         <div class="col-md-8">
             <div>
-                <h2 class="bg-primary bg-gradient">Trending Movies</h2>
+                <h2>Trending Movies</h2>
                 <ol>
                     {{#each trendingMovies as |trendingMovie|}}
                     <li>{{trendingMovie.name}}</li>
@@ -13,7 +90,7 @@
         </div>
         <div class="col-md-4">
             <div>
-                <h2 class="bg-primary bg-gradient">Upcoming Movies</h2>
+                <h2>Upcoming Movies</h2>
                 <ol>
                     {{#each upcomingMovies as |upcomingMovie|}}
                     <li>{{upcomingMovie.name}}</li>
@@ -22,7 +99,7 @@
             </div>
             <div>
                 <div>
-                    <h2 class="bg-primary bg-gradient">Recently Released</h2>
+                    <h2>Recently Released</h2>
                     <ol>
                         {{#each recentMovies as |recentMovie|}}
                         <li>{{recentMovie.name}}</li>
