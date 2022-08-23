@@ -63,8 +63,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/movies', (req, res) => {
-  res.render('movies');
+router.get('/movies', withAuth, (req, res) => {
+  
+  res.status(200).render('movies', {
+    logged_in: req.session.logged_in 
+  });
 })
 
 module.exports = router;

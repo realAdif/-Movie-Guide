@@ -1,31 +1,20 @@
-<div class="row">
-    <div class="col-auto">
-        <h2>Welcome, {{username}}!</h2>
-    </div>
-</div>
 
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Add a Movie: </h3>
-        <form class="form new-movie-form">
-            <div class="form-group">
-                <label for="movie-name">Movie Name: </label>
-                <input type="text" name="movie-name" id="movie-name">
-            </div>
-        <div class="form-group">
-        <label for="movie-review">Review:</label>
-        <textarea class="form-input" id="movie-review" name="movie-review"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Add Movie</button>
-        </div>
-      </form>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-auto">
+      <h2>Welcome, {{username}}!</h2>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Regular link</a></li>
+        <li><a class="dropdown-item active" href="#" aria-current="true">Active link</a></li>
+        <li><a class="dropdown-item" href="#">Another link</a></li>
+      </ul>
     </div>
-    <div>
+        <div>
       {{#if movies.length}}
       <div class="col-md-6 movie-list">
           <h3>Movies: </h3>
-      {{#each movie as |movies|}}
+      {{#each movies as |movie|}} {{! "movies" is the array which is being looped through for each movie}}
       <div class="row mb-2">
           <div class="col-md-8">
             <h4><a href="/movies/{{movie.id}}">{{movie.name}}</a></h4>
@@ -35,4 +24,7 @@
       </div>
       {{/if}}
     </div>
+  </div>
 </div>
+
+{{!Add an event handler that when you click on the link then it will do a different req to the backend to poulate the "movies" array above which will stay the same and display in lines 15-20}}
