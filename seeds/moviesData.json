@@ -1,4 +1,3 @@
-
 [
 {
   "name": "Titanic",
@@ -28,10 +27,7 @@
   "name": "Star Wars: Attack of the Clones",
   "year": 2002,
   "status": "Watched",
-  "priority": 0,
-  "rating": 5,
-  "review": "Great movie",
-  "user_id": "Low"
+  "priority": 0
 },
 {
   "name": "Star Wars: The Phantom Menace",
@@ -42,17 +38,12 @@
 {
   "name": "A Space Odyssey",
   "year": 1999,
-  "status": "Watched",
-  "rating": 2,
-  "review": "Boring movie dragging"
+  "status": "Watched"
 },
 {
   "name": "Back to the Future",
   "year": 1985,
-  "status": "Watched",
-  "rating": 1,
-  "review": "too Much",
-  "user_id": 5
+  "status": "Watched"
 },
 {
   "name": "Star Wars: The Phantom Menace",
@@ -64,10 +55,7 @@
   "name": "Inception",
   "year": 2010,
   "status": "Watched",
-  "priority": "Medium",
-  "rating": 5,
-  "review": "complex, engaging and slick",
-  "user_id": 3
+  "priority": "Medium"
 },
 {
   "name": "Arrival",
@@ -98,7 +86,7 @@
 {
   "name": "Hurtlocker",
   "year": 2008,
-  "status": "Unwatched",
+  "status": "Watched",
   "priority": "High"
 },
 {
