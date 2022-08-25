@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Movie, User } = require('../models');
+const { Movie, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -34,12 +34,45 @@ router.get('/profile', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
     });
-
     const user = userData.get({ plain: true });
 
+    // Get all Movies by Rating
+    const movieData = await Review.findAll({
+      include: [Movie],
+      where: {
+        user_id: req.session.user_id,
+      },
+      order: [
+        ["rating","DESC"]
+      ],
+    });
+          
+    // Serialize data so the template can read it
+    const movies = movieData.map((movie) => movie.get({ plain: true }));
+
+    const moviesWithStars = movies.map(movie => {
+      if (movie.rating == 1) {
+        movie.starRating = "★"
+      }
+      if (movie.rating == 2) {
+        movie.starRating = "★★"
+      }
+      if (movie.rating == 3) {
+        movie.starRating = "★★★"
+      }
+      if (movie.rating == 4) {
+        movie.starRating = "★★★★"
+      }
+      if (movie.rating == 5) {
+        movie.starRating = "★★★★★"
+      }
+      return movie;
+    });
+    
     res.render('profile', {
       ...user,
-      logged_in: true
+      movies: moviesWithStars,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log(err)
@@ -63,8 +96,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/movies', (req, res) => {
-  res.render('movies');
+router.get('/movies', withAuth, (req, res) => {
+  
+  res.status(200).render('movies', {
+    logged_in: req.session.logged_in 
+  });
 })
 
 module.exports = router;
