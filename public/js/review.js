@@ -6,11 +6,11 @@ const reviewCreateHandler = async (event) => {
   const review = document.querySelector('#review-descr').value.trim();
   const rating = document.querySelector('#rating-value').value.trim();
 
-  if (review && rating) {
+  if (review && rating && movie) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/reviews', {
       method: 'POST',
-      body: JSON.stringify({ review, rating }),
+      body: JSON.stringify({ movie, review, rating }),
       headers: { 'Content-Type': 'application/json' },
     });
 

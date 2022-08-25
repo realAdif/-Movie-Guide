@@ -101,12 +101,28 @@ router.get('/movies', withAuth, (req, res) => {
   res.status(200).render('movies', {
     logged_in: req.session.logged_in 
   });
-})
-router.get('/reviews', withAuth, (req, res) => {
-  
-  res.status(200).render('reviews', {
-    logged_in: req.session.logged_in 
+});
+
+router.get('/reviews', withAuth, async (req, res) => {
+    try {
+      // Get all Movies by Rating
+      const movieData = await Movie.findAll({
+      });
+            
+      // Serialize data so the template can read it
+      const movies = movieData.map((movie) => movie.get({ plain: true }));
+      
+      console.log(movies);
+      
+      res.status(200).render('reviews', {
+        movies,
+        logged_in: req.session.logged_in
+      });
+
+    } catch (err) {
+      console.log(err)
+      res.status(500).json(err);
+    }
   });
-})
 
 module.exports = router;
