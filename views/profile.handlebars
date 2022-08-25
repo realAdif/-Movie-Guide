@@ -1,33 +1,36 @@
 <div class="container text-center">
   <div class="row">
-    <div class="col-auto">
+    <div class="col-sm-3">
       <h2>Welcome, {{username}}!</h2>
       <br>
-      <h5>Movies</h5>
-      <ul class="dropdown-menu">
-        <li><h6 class="dropdown-header">Display Movies By:</h6></li>
-        <li><a class="dropdown-item" id="topRatings" href="#">Top Rated</a></li>
-        <li><a class="dropdown-item active" href="#" aria-current="true">Review</a></li>
-      </ul>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" id="display" type="button">Temp Display Reviews</button>
+        <button class="btn btn-primary" id="add-review" type="button">Review Movies</button>
+      </div>
     </div>
-        <div>
-      {{#if movies.length}}
-      <div class="col-md-6 movie-list">
-          <h3>Movies: </h3>
-      {{#each movies as |movie|}} {{! "movies" is the array which is being looped through for each movie}}
-      <div class="row mb-2">
-          <div class="col-md-8">
-            <h4><a href="/movies/{{movie.id}}">{{movie.name}}</a></h4>
-          </div>
+    <div class="col-sm-9">
+      <div class="row">
+        {{#if movies.length}}
+          <h3>Movie Reviews:</h3>
+            {{#each movies as |movie|}}
+              <div class="row">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="movie-name">{{movie.movie.name}}</h5>
+                    <h5 class="movie-rating">{{movie.starRating}}</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Review</h5>
+                    <p class="card-text">{{movie.review}}</p>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+        {{/if}}
       </div>
-      {{/each}}
-      </div>
-      {{/if}}
     </div>
   </div>
 </div>
 
-{{!Add an event handler that when you click on the link then it will do a different req to the backend to poulate the "movies" array above which will stay the same and display in lines 15-20}}
-
-
 <script src="./js/profile.js"></script>
+<script src="./js/review.js"></script>

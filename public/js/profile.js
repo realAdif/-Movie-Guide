@@ -1,21 +1,17 @@
-// const profileDisplayHandler = async (event) => {
-//   event.preventDefault();
+const profileDisplayHandler = async (event) => {
+  event.preventDefault();
 
-//   if () {
-//     const response = await fetch('/api/profile', {
-//       method: 'POST',
-//       body: JSON.stringify({ name, email, password, username }),
-//       headers: { 'Content-Type': 'application/json' },
-//     });
+    // Send a POST request to the API endpoint
+    const response = await fetch('/api/movies/ratings', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert(response.statusText);
-//     }
-//   }
-// };
+    if(response.ok) {
+      console.log("Data Sent")
+    }
+  };
 
-// document
-//   .querySelector('#topRatings')
-//   .addEventListener('click', profileDisplayHandler);
+document
+  .querySelector('#display')
+  .addEventListener('click', profileDisplayHandler);
