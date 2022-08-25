@@ -2,6 +2,7 @@ const reviewCreateHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
+  const movie = document.querySelector('#movie-id').value.trim();
   const review = document.querySelector('#review-descr').value.trim();
   const rating = document.querySelector('#rating-value').value.trim();
 

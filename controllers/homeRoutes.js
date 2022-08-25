@@ -102,5 +102,11 @@ router.get('/movies', withAuth, (req, res) => {
     logged_in: req.session.logged_in 
   });
 })
+router.get('/reviews', withAuth, (req, res) => {
+  
+  res.status(200).render('reviews', {
+    logged_in: req.session.logged_in 
+  });
+})
 
 module.exports = router;

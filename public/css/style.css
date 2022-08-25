@@ -4,6 +4,9 @@
 .nav-item{
     padding-right: 50px;
 }
+.site-text {
+  color:rgb(177, 177, 177);
+}
 #logo-1{
     max-width: 400px;
     max-height: 400px;
