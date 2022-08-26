@@ -6,10 +6,9 @@
         <select class="form-select" id="movie-id">
           <option selected>Select Movie</option>
           {{#each movies as |movie|}}
-          <option value="{{movie.id}}">{{movie.movie.name}}</option>
+          <option value="{{movie.id}}">{{movie.name}}</option>
           {{/each}}
         </select>
-      <br>
       <br>
       <label for="rating-value" class="form-label site-text">Rating</label>
       <select class="form-select" id="rating-value" aria-label="Select Movie Rating">
@@ -25,6 +24,8 @@
         <label for="review-descr" class="form-label site-text">Review</label>
         <textarea class="form-control" id="review-descr" placeholder="Enter in Review Here..." rows="3"></textarea>
       </div>
+      <br>
+      <h6 id="success" class="site-text hide">Review Saved</h6>
       <br>
       <button class="btn btn-outline-light" id="add-review" type="button">Add Movie Review</button>
     </div>

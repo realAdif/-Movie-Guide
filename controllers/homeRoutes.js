@@ -112,8 +112,6 @@ router.get('/reviews', withAuth, async (req, res) => {
       // Serialize data so the template can read it
       const movies = movieData.map((movie) => movie.get({ plain: true }));
       
-      console.log(movies);
-      
       res.status(200).render('reviews', {
         movies,
         logged_in: req.session.logged_in
