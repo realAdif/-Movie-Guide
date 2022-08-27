@@ -1,8 +1,25 @@
-.nav-link{
+.nav-link {
     color: white;
 }
-.nav-item{
+.nav-item {
     padding-right: 50px;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site-text {
+  color:rgb(177, 177, 177);
+}
+
+#give-me-space {
+  margin: 7px;
 }
 #logo-1{
     max-width: 400px;

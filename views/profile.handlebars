@@ -1,26 +1,25 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-sm-3">
-      <h2>Welcome, {{username}}!</h2>
-      <br>
-      <div class="d-grid gap-2">
-        <button class="btn btn-outline-light" id="display" type="button">Show My Reviews</button>
-        <button class="btn btn-outline-light" id="add-review" type="button">Review Movies</button>
-      </div>
+      <h2 class="site-text">Welcome, {{username}}!</h2>
+      {{#if movies.length}}
+      <p class="site-text">Thank you for adding your movie review.</p>
+      <p class="site-text">You have reviewed the following Movies.</p>
+      {{/if}}
     </div>
     <div class="col-sm-9">
       <div class="row">
         {{#if movies.length}}
-          <h3>Movie Reviews:</h3>
+          <h3 class="site-text">Movie Reviews:</h3>
             {{#each movies as |movie|}}
-              <div class="row">
+              <div class="row" id="give-me-space">
                 <div class="card">
                   <div class="card-header">
                     <h5 class="movie-name">{{movie.movie.name}}</h5>
                     <h5 class="movie-rating">{{movie.starRating}}</h5>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Review</h5>
+                    <h5 class="card-title">Review:</h5>
                     <p class="card-text">{{movie.review}}</p>
                   </div>
                 </div>
@@ -33,4 +32,3 @@
 </div>
 
 <script src="./js/profile.js"></script>
-<script src="./js/review.js"></script>
