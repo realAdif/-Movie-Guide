@@ -70,6 +70,24 @@
             </div>
           </div>
         </div>
+        <div class="col-md-4">
+            <div>
+                <h2 class="site-text">Upcoming Movies</h2>
+                <ol>
+                    {{#each upcomingMovies as |upcomingMovie|}}
+                    <li>{{upcomingMovie.name}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div>
+                <div>
+                    <h2 class="site-text">Recently Released</h2>
+                    <ol>
+                        {{#each recentMovies as |recentMovie|}}
+                        <li>{{recentMovie.name}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
       </td>
       <td>
         <div class="card text-bg-dark mb-3" style="max-width: 500px;">

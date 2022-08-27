@@ -5,9 +5,18 @@
     padding-right: 50px;
 }
 
+.navbar-toggler {
+    background-color: rgb(177, 177, 177);;
+}
+
+#navbar-toggle {
+    margin-right: 20px;
+}
+
 .hide {
     display: none;
 }
+
 .show {
     display: flex;
     flex-direction: column;
@@ -26,9 +35,18 @@
     font-weight: bold;
 }
 
-#give-me-space {
+.give-me-space {
     margin: 7px;
 }
+
+.no-pad {
+  padding: 0;
+}
+
+.movie-rating {
+  color: rgb(204, 174, 7);
+}
+
 #logo-1{
     max-width: 400px;
     max-height: 400px;
