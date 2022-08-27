@@ -27,6 +27,14 @@
     color:rgb(177, 177, 177);
 }
 
+.posters {
+    max-width: 40px;
+}
+
+.rank {
+    font-weight: bold;
+}
+
 .give-me-space {
     margin: 7px;
 }
@@ -109,10 +117,3 @@ input::placeholder{
     margin-top: 5%;
 }
 
-.posters {
-    max-width: 40px;
-}
-
-.rank {
-    font-weight: bold;
-}
