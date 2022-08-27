@@ -6,20 +6,28 @@
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 .show {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .site-text {
-  color:rgb(177, 177, 177);
+    color:rgb(177, 177, 177);
+}
+
+.posters {
+    max-width: 40px;
+}
+
+.rank {
+    font-weight: bold;
 }
 
 #give-me-space {
-  margin: 7px;
+    margin: 7px;
 }
 #logo-1{
     max-width: 400px;
@@ -91,10 +99,3 @@ input::placeholder{
     margin-top: 5%;
 }
 
-.posters {
-    max-width: 40px;
-}
-
-.rank {
-    font-weight: bold;
-}
