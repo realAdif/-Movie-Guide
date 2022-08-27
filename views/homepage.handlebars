@@ -40,41 +40,122 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+  </div>
 </div>
 <br>
 <br>
 <br>
 <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div>
-                <h2>Trending Movies</h2>
-                <ol>
-                    {{#each trendingMovies as |trendingMovie|}}
-                    <li>{{trendingMovie.name}}</li>
-                    {{/each}}
-                </ol>
+  <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"><h4>Upcoming Movies</h4></th>
+      <th scope="col"><h4>Recently Released</h4></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_pinocchio_v1_193_f451c274.jpeg" class="img-fluid rounded-start">
             </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Pinocchio</h5>
+                <h6>Where to Watch: Disney+</h6>
+                <p><small>Releasing: Sep 8, 2022</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-            <div>
-                <h2>Upcoming Movies</h2>
-                <ol>
-                    {{#each upcomingMovies as |upcomingMovie|}}
-                    <li>{{upcomingMovie.name}}</li>
-                    {{/each}}
-                </ol>
+      </td>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://m.media-amazon.com/images/M/MV5BNmVhMTFjN2QtODVkZi00MzVjLTlkOGItNmRkNWRhYmY4MGVjXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded-start" alt="...">
             </div>
-            <div>
-                <div>
-                    <h2>Recently Released</h2>
-                    <ol>
-                        {{#each recentMovies as |recentMovie|}}
-                        <li>{{recentMovie.name}}</li>
-                        {{/each}}
-                    </ol>
-                </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">They/Them</h5>
+                <h6>Where to Watch: peacock</h6>
+                <p><small>Released: Aug 5, 2022</small></p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://m.media-amazon.com/images/M/MV5BN2ZmYTlhNmMtODQ0OS00YWNiLWI1MmMtNzkwYWMzOGM4YWQxXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Black Adam</h5>
+                <h6>Where to Watch: Theatres</h6>
+                <p><small>Released: Aug 5, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://yc.cldmlk.com/movie-max-digital/1660706396287_invpost.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">The Invitation</h5>
+                <h6>Where to Watch: Theatres</h6>
+                <p><small>Released: Aug 26, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://m.media-amazon.com/images/M/MV5BNDk2YTA1MGYtMGNjMi00YTJlLWI1YjItMjBjOGJlZGIwZmYzXkEyXkFqcGdeQXVyODA0MjgyNzM@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Blonde</h5>
+                <h6>Where to Watch: Netflix</h6>
+                <p><small>Released: Sep 28, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="card text-bg-dark mb-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Thor: Love and Thunder</h5>
+                <h6>Where to Watch: Theatres</h6>
+                <p><small>Released: July 8, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
