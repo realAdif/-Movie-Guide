@@ -46,7 +46,7 @@ router.get('/profile', withAuth, async (req, res) => {
         ["rating","DESC"]
       ],
     });
-          
+    
     // Serialize data so the template can read it
     const movies = movieData.map((movie) => movie.get({ plain: true }));
 

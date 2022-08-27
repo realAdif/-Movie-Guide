@@ -5,22 +5,39 @@
     padding-right: 50px;
 }
 
-.hide {
-  display: none;
+.navbar-toggler {
+    background-color: rgb(177, 177, 177);;
 }
+
+#navbar-toggle {
+    margin-right: 20px;
+}
+
+.hide {
+    display: none;
+}
+
 .show {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .site-text {
-  color:rgb(177, 177, 177);
+    color:rgb(177, 177, 177);
 }
 
-#give-me-space {
-  margin: 7px;
+.give-me-space {
+    margin: 7px;
 }
+.no-pad {
+  padding: 0;
+}
+
+.movie-rating {
+  color: rgb(204, 174, 7);
+}
+
 #logo-1{
     max-width: 400px;
     max-height: 400px;
